@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние нажатия -->
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="4dp" /> <!-- Здесь 10dp задает радиус закругления углов -->
+            <solid android:color="@color/on" />
+        </shape>
+    </item>
+
+    <!-- Состояние по умолчанию -->
+    <item>
+        <shape>
+            <corners android:radius="4dp" /> <!-- Здесь 10dp задает радиус закругления углов -->
+            <solid android:color="@color/off" />
+        </shape>
+    </item>
+</selector>

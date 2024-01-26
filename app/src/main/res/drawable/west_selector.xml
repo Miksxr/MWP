@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние "Нажато" для кнопки "west" -->
+    <item android:state_pressed="true" android:drawable="@drawable/west2" />
+
+    <!-- Состояние "Обычное" для кнопки "west" -->
+    <item android:drawable="@drawable/west" />
+
+    <!-- Другие состояния и изображения для других кнопок можно добавить здесь -->
+
+</selector>

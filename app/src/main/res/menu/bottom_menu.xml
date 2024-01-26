@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/tournamentNew"
+          android:icon="@drawable/rating"
+          android:title="Турнир"
+          android:orderInCategory="1"/>
+    <item android:id="@+id/ratingNew"
+         android:icon="@drawable/tournament"
+         android:title="Рейтинг"
+         android:orderInCategory="2"/>
+    <item android:id="@+id/statisticsNew"
+         android:icon="@drawable/statistics"
+         android:title="Статистика"
+         android:orderInCategory="3"/>
+    <item android:id="@+id/extraNew"
+         android:icon="@drawable/extra"
+         android:title="Инфа"
+         android:orderInCategory="4"/>
+</menu>

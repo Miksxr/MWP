@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/tournamentNew">
+
+    <activity
+        android:id="@+id/signIn"
+        android:name="com.miksxr.m_w_p.Activity.SignIn"
+        android:label="activity_sign_in"
+        tools:layout="@layout/activity_sign_in" />
+    <fragment
+        android:id="@+id/tournamentNew"
+        android:name="com.miksxr.m_w_p.MainFragments.TournamentNew"
+        android:label="fragment_tournament_new"
+        tools:layout="@layout/fragment_tournament_new" >
+        <action
+            android:id="@+id/action_tournamentNew_to_grandNew"
+            app:destination="@id/grandNew" />
+        <action
+            android:id="@+id/action_tournamentNew_to_rofloNew"
+            app:destination="@id/rofloNew" />
+        <action
+            android:id="@+id/action_tournamentNew_to_soloNew"
+            app:destination="@id/soloNew" />
+        <action
+            android:id="@+id/action_tournamentNew_to_history"
+            app:destination="@id/history" />
+        <action
+            android:id="@+id/action_tournamentNew_to_versionNew"
+            app:destination="@id/versionNew" />
+        <action
+            android:id="@+id/action_tournamentNew_to_leonid"
+            app:destination="@id/leonid" />
+    </fragment>
+    <fragment
+        android:id="@+id/ratingNew"
+        android:name="com.miksxr.m_w_p.MainFragments.RatingNew"
+        android:label="fragment_rating_new"
+        tools:layout="@layout/fragment_rating_new" >
+        <action
+            android:id="@+id/action_ratingNew_to_detailsNew"
+            app:destination="@id/detailsNew" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsNew"
+        android:name="com.miksxr.m_w_p.DetailsNew"
+        android:label="fragment_details_new"
+        tools:layout="@layout/fragment_details_new" />
+    <fragment
+        android:id="@+id/statisticsNew"
+        android:name="com.miksxr.m_w_p.MainFragments.StatisticsNew"
+        android:label="fragment_statistics_new"
+        tools:layout="@layout/fragment_statistics_new" />
+    <fragment
+        android:id="@+id/extraNew"
+        android:name="com.miksxr.m_w_p.MainFragments.ExtraNew"
+        android:label="fragment_extra_new"
+        tools:layout="@layout/fragment_extra_new" >
+        <action
+            android:id="@+id/action_extraNew_to_records"
+            app:destination="@id/records" />
+        <action
+            android:id="@+id/action_extraNew_to_rulesNew"
+            app:destination="@id/rulesNew" />
+    </fragment>
+    <fragment
+        android:id="@+id/history"
+        android:name="com.miksxr.m_w_p.Tournaments.History"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/records"
+        android:name="com.miksxr.m_w_p.Extra.Records"
+        android:label="fragment_records"
+        tools:layout="@layout/fragment_records" />
+    <fragment
+        android:id="@+id/soloNew"
+        android:name="com.miksxr.m_w_p.Tournaments.SoloNew"
+        android:label="fragment_solo_new"
+        tools:layout="@layout/fragment_solo_new" />
+    <fragment
+        android:id="@+id/grandNew"
+        android:name="com.miksxr.m_w_p.Tournaments.GrandNew"
+        android:label="GrandNew" />
+    <fragment
+        android:id="@+id/rofloNew"
+        android:name="com.miksxr.m_w_p.Tournaments.RofloNew"
+        android:label="RofloNew" />
+    <fragment
+        android:id="@+id/versionNew"
+        android:name="com.miksxr.m_w_p.Tournaments.VersionNew"
+        android:label="VersionNew" />
+    <fragment
+        android:id="@+id/rulesNew"
+        android:name="com.miksxr.m_w_p.Extra.RulesNew"
+        android:label="RulesNew" />
+    <fragment
+        android:id="@+id/leonid"
+        android:name="com.miksxr.m_w_p.Tournaments.Leonid"
+        android:label="fragment_leonid"
+        tools:layout="@layout/fragment_leonid" />
+</navigation>

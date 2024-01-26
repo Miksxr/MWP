@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "570191032496",
+    "firebase_url": "https://m-w-p-d3072-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "m-w-p-d3072",
+    "storage_bucket": "m-w-p-d3072.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570191032496:android:0ace943dd8464e8810cb75",
+        "android_client_info": {
+          "package_name": "com.miksxr.m_w_p"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570191032496-ofp0uqvtgv1j0cfetr92i729kqq573jk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.miksxr.m_w_p",
+            "certificate_hash": "1f3549a0bf56f88bfa43bde90f5ad9e6cb3ce1f6"
+          }
+        },
+        {
+          "client_id": "570191032496-pp0hadf63a4idgoop3q5ctu3vnvp3ig7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLkR70QuETDElxHJ0meqc2GyTINyx7sqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570191032496-a4dija9183ekiapb0ff8q1f8p2ukfm92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

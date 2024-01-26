@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_2"
+    tools:openDrawer="star">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="111dp">
+
+        <TextView
+            android:id="@+id/SoloDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(??.??.??)"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_solo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_solo"
+            app:layout_constraintTop_toTopOf="@+id/button_solo" />
+
+        <Button
+            android:id="@+id/button_grand"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="пати-турик"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:backgroundTint="@color/buttons_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Button
+            android:id="@+id/button_solo"
+            style="Theme.MaterialComponents.DayNight.DarkActionBar"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:text="Соло-турик"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:backgroundTint="@color/buttons_selector"
+            app:layout_constraintEnd_toEndOf="@+id/button_grand"
+            app:layout_constraintStart_toStartOf="@+id/button_grand"
+            app:layout_constraintTop_toBottomOf="@+id/button_grand" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dota2"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/button_history"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            app:srcCompat="@drawable/history_games" />
+
+        <ImageView
+            android:id="@+id/button_games"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            app:srcCompat="@drawable/menu" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_disabled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_solo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Новостей нет"
+                    android:textColor="@color/white"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/News"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/DataPati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(??.??.??)"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_grand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_grand"
+            app:layout_constraintTop_toTopOf="@+id/button_grand" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/NV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/nav"
+        app:itemShapeFillColor="@color/common_google_signin_btn_text_light_default"
+        app:itemTextColor="@color/off"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subheaderColor="@color/off"
+        tools:layout_editor_absoluteX="32dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img_12">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:gravity="left"
+                android:text="makdak"
+                android:textColor="@color/off"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:icon="@drawable/extra"
+                app:layout_constraintEnd_toEndOf="@+id/button_zombi"
+                app:layout_constraintStart_toStartOf="@+id/button_zombi"
+                app:layout_constraintTop_toBottomOf="@+id/button_zombi" />
+
+            <Button
+                android:id="@+id/button_zombi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/black"
+                android:gravity="left"
+                android:text="Zombi ferma"
+                android:textColor="@color/off"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:icon="@drawable/extra"
+                app:layout_constraintEnd_toEndOf="@+id/Dota2"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="@+id/Dota2"
+                app:layout_constraintTop_toBottomOf="@+id/Dota2" />
+
+            <ImageView
+                android:id="@+id/telegram"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/telegram" />
+
+            <ImageView
+                android:id="@+id/discord"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="-2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/telegram"
+                app:srcCompat="@drawable/discord" />
+
+            <ImageView
+                android:id="@+id/youtube"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/youtube" />
+
+            <ImageView
+                android:id="@+id/twitch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/youtube"
+                app:layout_constraintEnd_toStartOf="@+id/youtube"
+                app:srcCompat="@drawable/twitch" />
+
+            <Button
+                android:id="@+id/button_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/buttons_selector"
+                android:text="1.0"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/discord"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/black"
+                android:text=" M W P "
+                android:textColor="@color/off"
+                android:textSize="58sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/Dota2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/black"
+                android:gravity="left"
+                android:text="Dota 2"
+                android:textColor="@color/off"
+                android:textSize="20sp"
+                app:icon="@drawable/baseline_cancel_243"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:elevation="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Dota2"
+                app:layout_constraintStart_toStartOf="@+id/Dota2"
+                app:layout_constraintTop_toTopOf="@+id/Dota2"
+                app:srcCompat="@drawable/dota2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>
