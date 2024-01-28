@@ -29,7 +29,6 @@ class DetailsNew : Fragment() {
         binding = FragmentDetailsNewBinding.inflate(inflater, container, false)
 
         val arguments = requireArguments()
-
         val navController = findNavController()
 
         binding.back.setOnClickListener { navController.navigate(R.id.ratingNew) }
