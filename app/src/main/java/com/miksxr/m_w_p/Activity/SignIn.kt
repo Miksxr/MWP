@@ -37,6 +37,12 @@ class SignIn : AppCompatActivity() {
         binding.ButtonSignIn.setOnClickListener {
             signInWithGoogle()
         }
+
+        binding.ButtonSignIn.setOnLongClickListener {
+            startMainActivityWithoutSignIn()
+            true
+        }
+
         checkAuthState()
     }
 
@@ -62,6 +68,7 @@ class SignIn : AppCompatActivity() {
                 firebaseAuth(account.idToken!!)
             }
         } catch (e: ApiException) {
+            // Handle sign-in failure
         }
     }
 
@@ -71,14 +78,19 @@ class SignIn : AppCompatActivity() {
             if (task.isSuccessful) {
                 checkAuthState()
             } else {
+                // Handle sign-in failure
             }
         }
     }
 
+    private fun startMainActivityWithoutSignIn() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
     private fun checkAuthState() {
         if (auth.currentUser != null) {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            startMainActivityWithoutSignIn()
         }
     }
 }

@@ -23,6 +23,7 @@ class RatingNew : Fragment(), Adapter.Listener {
         Player("Miksxr", "MiksxrRT", "MiksxrGames", "MiksxrWin", R.drawable.miksxr),
         Player("Iksar", "IksarRT", "IksarGames", "IksarWin", R.drawable.iksar),
         Player("Ko.Ka.", "KoKaRT", "KoKaGames", "KoKaWin", R.drawable.koka),
+        Player("Kira agonek", "KiraAgonekRT", "KiraAgonekGames", "KiraAgonekWin", R.drawable.kira_agonek),
     )
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {

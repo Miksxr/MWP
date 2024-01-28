@@ -1,4 +1,4 @@
-package com.miksxr.m_w_p
+package com.miksxr.m_w_p.MainFragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.miksxr.m_w_p.R
 import com.miksxr.m_w_p.RecyclerView.Adapter2
 import com.miksxr.m_w_p.RecyclerView.Model2
 import com.miksxr.m_w_p.databinding.FragmentDetailsNewBinding
@@ -111,7 +112,7 @@ class DetailsNew : Fragment() {
         }
 
         return when (textName) {
-            "Iksar", "Miksxr", "Ko.Ka." -> fetchData(textName)
+            "Iksar", "Miksxr", "Ko.Ka.", "Kira agonek" -> fetchData(textName)
             else -> fetchData("Ko.Ka.")
         }
     }
@@ -176,5 +177,4 @@ class DetailsNew : Fragment() {
 
         return dataList
     }
-
 }

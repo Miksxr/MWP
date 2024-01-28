@@ -20,10 +20,21 @@ class TournamentNew : Fragment() {
     private var lastClickTime: Long = 0
     private var clickCount = 0
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentTournamentNewBinding.inflate(inflater, container, false)
 
+        setupNavigation()
+        setupLinks()
+        setupFirebaseListeners()
+        setupDota2ClickListener()
+
+        return binding.root
+    }
+
+    private fun setupNavigation() {
         val navController = findNavController()
 
         binding.buttonGrand.setOnClickListener { navController.navigate(R.id.grandNew) }
@@ -32,27 +43,37 @@ class TournamentNew : Fragment() {
         binding.buttonZombi.setOnClickListener { navController.navigate(R.id.leonid) }
         binding.buttonHistory.setOnClickListener { navController.navigate(R.id.history) }
 
+        binding.buttonGames.setOnClickListener { binding.drawer.openDrawer(GravityCompat.START) }
+    }
+
+    private fun setupLinks() {
         binding.telegram.setOnClickListener { openLink("https://t.me/+XUpeObROpwE3ZjAy") }
         binding.discord.setOnClickListener { openLink("https://discord.gg/v8HYVUXma8") }
         binding.youtube.setOnClickListener { openLink("https://youtube.com/@miksxxxr?si=NMzPo55R12r9p5Ln") }
         binding.twitch.setOnClickListener { openLink("https://www.twitch.tv/miksxr_studio") }
+    }
 
-        binding.buttonGames.setOnClickListener { binding.drawer.openDrawer(GravityCompat.START)}
-
+    private fun setupFirebaseListeners() {
         Firebase.firestore.collection("Tournament").document("News").addSnapshotListener { snapshot, exception ->
             if (exception == null && snapshot?.exists() == true) {
-
-                binding.News.setImageResource(resources.getIdentifier(snapshot.getString("Image"), "drawable", requireActivity().packageName))
+                binding.News.setImageResource(
+                    resources.getIdentifier(
+                        snapshot.getString("Image"),
+                        "drawable",
+                        requireActivity().packageName
+                    )
+                )
             }
         }
 
         Firebase.firestore.collection("Tournament").document("Solo_Date").addSnapshotListener { snapshot, exception ->
             if (exception == null && snapshot?.exists() == true) {
-
                 binding.SoloDate.text = snapshot.getString("Text")
             }
         }
+    }
 
+    private fun setupDota2ClickListener() {
         binding.Dota2.setOnClickListener {
             val currentTime = System.currentTimeMillis()
 
@@ -60,7 +81,7 @@ class TournamentNew : Fragment() {
                 clickCount++
 
                 if (clickCount == 3) {
-                    navController.navigate(R.id.leonid)
+                    findNavController().navigate(R.id.leonid)
                     clickCount = 0
                 }
             } else {
@@ -69,8 +90,6 @@ class TournamentNew : Fragment() {
 
             lastClickTime = currentTime
         }
-
-        return binding.root
     }
 
     private fun openLink(link: String) {

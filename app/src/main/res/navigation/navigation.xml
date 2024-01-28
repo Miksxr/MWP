@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsNew"
-        android:name="com.miksxr.m_w_p.DetailsNew"
+        android:name="com.miksxr.m_w_p.MainFragments.DetailsNew"
         android:label="fragment_details_new"
         tools:layout="@layout/fragment_details_new" />
     <fragment
